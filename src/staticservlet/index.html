@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova cors</title>
+</head>
+
+<h2>GET simple</h2>
+<a href="http://localhost:8080/target?nom=bill"></a>
+
+<h2>POST simple </h2>
+    <form action="http://localhost:8080/target"></form>
+<input TYPE="hidden" name="nom" value="bill">
+<button type="submit">envia</button>
+</form>
+<h2>GET per javascript</h2>
+<script>
+    function ferGet(){
+        fetch("http://localhost:8080/target?nom=bill",{method:"GET", credentials:"include"}
+    ).then(res =>{ console.log(res)})
+    }
+</script>
+</body>
+</html>
